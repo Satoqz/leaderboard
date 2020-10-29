@@ -1,7 +1,6 @@
 {
   "name": "leaderboard",
   "version": "0.1.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/satoqz/leaderboard.git"
@@ -11,7 +10,7 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
-    "prod": "yarn install && yarn build && yarn start"
+    "prod": "yarn install && yarn build && yarn install --production && yarn start"
   },
   "dependencies": {
     "next": "9.5.5",
