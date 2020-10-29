@@ -1,0 +1,102 @@
+.statBlock {
+  display: flex;
+  height: 50px;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statName {
+  font-size: 0.8rem;
+  font-weight: 100;
+  line-height: 1;
+  margin-bottom: 1px;
+  color: #85878a;
+}
+
+.statValue {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 5px;
+  color: var(--text-color);
+}
+
+.userRank {
+  background-color: #f6decf;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-weight: 100;
+  color: #3d405b;
+  margin-left: 15px;
+}
+
+.userIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.userIcon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.userName {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-left: 15px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: var(--text-color)
+}
+
+.userStats {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  align-self: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.userLeft {
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  float: left;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.separator {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--c3);
+}

@@ -1,0 +1,28 @@
+{
+  "name": "leaderboard",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satoqz/leaderboard.git"
+  },
+  "homepage": "https://github.com/satoqz/leaderboard#readme",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "prod": "yarn install && yarn build && yarn start"
+  },
+  "dependencies": {
+    "next": "9.5.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sqlite": "^4.0.15",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.5",
+    "@types/react": "^16.9.53",
+    "typescript": "^4.0.5"
+  }
+}

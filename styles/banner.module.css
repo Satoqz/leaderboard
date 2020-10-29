@@ -1,0 +1,19 @@
+.guildBanner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.guildImg {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.guildName {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-left: 15px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}

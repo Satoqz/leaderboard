@@ -1,0 +1,44 @@
+.stepContainer {
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.stepContainer > div:first-child {
+  margin-top: auto;
+  text-align: center;
+}
+
+.step {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 4em;
+  color: var(--text-color);
+}
+
+.one {
+  background-color: gold;
+  height: 200px;
+}
+
+.two {
+  background-color: silver;
+  height: 150px;
+}
+
+.three {
+  background-color: #cd7f32;
+  height: 100px
+}
