@@ -1,15 +1,14 @@
-import type { User } from "./services/sqlite"
-
-export interface PaginationProps {
+export namespace common {}
+interface PaginationProps {
   requested: number
   available: number
 }
 
-export interface UserProps {
+interface UserProps {
   users: User[]
 }
 
-export interface RootProps extends UserProps {
+interface RootProps extends UserProps {
   pages: PaginationProps
   redirect?: boolean
 }
@@ -23,7 +22,7 @@ interface PartialUser {
   last_known_avatar_url: string | null
 }
 
-export interface User {
+interface User {
   name: string
   avatar: string
   level_xp: number
