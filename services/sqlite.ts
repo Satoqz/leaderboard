@@ -53,7 +53,7 @@ class SQLite {
   }
 
   private waitReady() {
-    return new Promise(resolve => {
+    return new Promise<void>(resolve => {
       if (this.ready)
         resolve()
       else
