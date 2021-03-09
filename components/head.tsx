@@ -2,9 +2,9 @@ import * as NextHead from "next/head"
 
 export default function Head() {
   const
-    title = "🧅Ceapa Cool Discord🧅",
-    desc = "🥚 Leader board for Ceapa Cool's discord server 🔥🍆💦",
-    url = "https://cbt.cool",
+    title = "🧅 Ceapa Cool Discord 🧅",
+    desc = "🥚 Leaderboard for Ceapa Cool's discord server 🔥🍆💦",
+    url = "https://leaderboard.cbt.cool",
     image = "https://cdn.discordapp.com/emojis/700539798762553355.png"
   return (
     <NextHead.default>
