@@ -1,47 +1,40 @@
+import React from "react";
 import type { PaginationProps } from "../common"
-import { Component, Fragment } from "react";
 import styles from "../styles/pagination.module.css"
 
 type Props = { pages: PaginationProps }
 
-export default class Pagination extends Component<Props, PaginationProps> {
+function Pagination(props: Props) {
 
-  constructor(props: Props) {
-    super(props)
-    this.state = props.pages
+  function move(direction: number) {
+    goTo(props.pages.requested + direction)
   }
 
-  move(direction: number) {
-    this.goTo(this.state.requested + direction)
-  }
-
-  goTo(page: number) {
+  function goTo(page: number) {
     window.location.href = `/page/${page}`
   }
 
-  render() {
-    return (
-      <div className={styles.pagination}>
-        {
-          this.state.requested == 1
-            ? null
-            : <Fragment>
-                <PageButton onClick={() => this.goTo(1)} name="1" />
-                <PageButton onClick={() => this.move(-1)} name="‹" />
-              </Fragment>
-        }
-        <PageButton disabled={true} name={this.state.requested} />
-        {
-          this.state.requested == this.state.available
-            ? null
-            : <Fragment>
-                      <PageButton onClick={() => this.move(1)} name="›" />
-                      <PageButton onClick={() => this.goTo(this.state.available)} name={this.state.available}/>
-              </Fragment>
-        }
-      </div>
-    )
-  }
+  return (
+    <div className={styles.pagination}>
+      {
+        props.pages.requested == 1
+          ? null
+          : <>
+              <PageButton onClick={() => goTo(1)} name="1" />
+              <PageButton onClick={() => move(-1)} name="‹" />
+            </>
+      }
+      <PageButton disabled={true} name={props.pages.requested} />
+      {
+        props.pages.requested == props.pages.available
+          ? null
+          : <>
+              <PageButton onClick={() => move(1)} name="›"/>
+              <PageButton onClick={() => goTo(props.pages.available)} name={props.pages.available}/>
+            </>
+      }
+    </div>
+  )
 }
 
 interface ButtonProps {
@@ -50,12 +43,16 @@ interface ButtonProps {
   name: string | number
 }
 
-function PageButton({ onClick, name, disabled }: ButtonProps) {
-  if (disabled)
-    return (
-      <button disabled className={styles.button}>{name}</button>
-    )
+function PageButton({ onClick, name, disabled = false}: ButtonProps) {
   return (
-    <button onClick={() => onClick()} className={styles.button}>{name}</button>
+    <button
+      onClick={() => onClick()}
+      className={styles.button}
+      disabled={disabled}
+    >
+      {name}
+    </button>
   )
 }
+
+export default Pagination
