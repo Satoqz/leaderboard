@@ -15,6 +15,7 @@ export default function Card({ user }: Props) {
     setAvatarURL(defaultAv(user.name));
   }
 
+  // forcing client-side rendering to catch the image loading error event
   if (process.browser)
     return (
       <>
