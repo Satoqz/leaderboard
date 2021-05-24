@@ -62,7 +62,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 .userStats {

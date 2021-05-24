@@ -1,4 +1,4 @@
-import styles from "../styles/banner.module.css"
+import styles from "../styles/banner.module.css";
 
 export default function Banner() {
   return (
@@ -8,5 +8,5 @@ export default function Banner() {
         <div className={styles.guildName}>🧅Ceapa Cool</div>
       </div>
     </div>
-  )
+  );
 }
